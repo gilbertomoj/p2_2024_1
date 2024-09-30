@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: 11.0.17 (Eclipse Adoptium)
+
+Name: report.html
+SHA-256-Digest: WRIfWEOCROTsoPt3ahfu9jXcaZx6LjxCBTinsY+O8iA=
+
+Name: SumNatural.java
+SHA-256-Digest: wQtNKmdzScn8mi9x0nUeCTKg1rIaOgTvMPK/tKacz8A=
+

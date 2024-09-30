@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="Submission" content="929NPD09NPDX3B1YI6HOYMXRL"/>
+<meta name="Time" content="2024-09-06T02:36:43Z"/>
+<meta name="ID" content="Rainfall"/>
+<meta name="User" content="utiv-nijy-wyqe-ypin"/>
+<meta name="Problem" content="ext/2005210250aox045y5asqr7eh457ga7rtsg"/>
+<meta name="Elapsed" content="4313 ms"/>
+<style type="text/css">
+.header {font-weight: bold; font-size: 1.2em; }
+.item {font-weight: bold;}
+.pass {color: green;}
+.fail {color: red;}
+.note {color: blue; font-weight: bold;}
+table.file td {padding-right: 1em; background: #FFF; }
+.linenumber {color: gray;}
+.footnote {font-size: 0.7em;}
+table {font-size: 0.9em;}
+td, th { background: #EEE; margin: 0.5em; padding: 0.25em;}
+table.output td {vertical-align: top;}
+div.footnotes { border-top: 1px solid gray; padding-top: 0.5em; }
+</style>
+<title>Report</title>
+</head>
+<body>
+<p class="header call">Calling with Arguments</p>
+<div class="call">
+<table class="run">
+<tr><th>&#160;</th><th>Name</th><th>Arguments</th><th>Actual</th><th>Expected</th></tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>averageRainfall</pre></td>
+<td><pre>new double[] { 1, 2, 3, 4, 5, 9999 }</pre></td>
+<td><pre>3.0
+</pre></td>
+<td><pre>3.0
+</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>averageRainfall</pre></td>
+<td><pre>new double[] { 1, 2, -3, 4, 5, 9999 }</pre></td>
+<td><pre>3.0
+</pre></td>
+<td><pre>3.0
+</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>averageRainfall</pre></td>
+<td><pre>new double[] { 1, 2, 3, 4, 5, 9999, 6, 7 }</pre></td>
+<td><pre>3.0
+</pre></td>
+<td><pre>3.0
+</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>averageRainfall</pre></td>
+<td><pre>new double[] {1, 2, 3, -4, 9999, 5}</pre></td>
+<td><pre>2.0
+</pre></td>
+<td><pre>2.0
+</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>averageRainfall</pre></td>
+<td><pre>new double[] { 10, 9999 }</pre></td>
+<td><pre>10.0
+</pre></td>
+<td><pre>10.0
+</pre></td>
+</tr>
+<tr><td><span class="fail">fail </span></td>
+<td><pre>averageRainfall</pre></td>
+<td><pre>new double[] { 10, 0, 9999 }</pre></td>
+<td><pre>10.0
+</pre></td>
+<td><pre>5.0
+</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>averageRainfall</pre></td>
+<td><pre>new double[] { -1, -2, -3, 9999 }</pre></td>
+<td><pre>0.0
+</pre></td>
+<td><pre>0.0
+</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>averageRainfall</pre></td>
+<td><pre>new double[] { 9999 }</pre></td>
+<td><pre>0.0
+</pre></td>
+<td><pre>0.0
+</pre></td>
+</tr>
+</table>
+</div>
+<p class="header studentFiles">Submitted files</p>
+<div class="studentFiles">
+<p class="caption">Rainfall.java:</p>
+<pre class="output">/********************************************************
+ *                                                      * 
+ * PROBLEM:                                             *
+ *                                                      *
+ * Complete the design of the function called           *
+ * averagerainfall that consumes an array of double     *
+ * and produces the average, but ignore negative values *
+ * (which must have been measurement errors), and stop  *
+ * when you reach the sentinel 9999.                    *
+ *                                                      *
+ * see examples wrapped in check-expect.                *
+ *  -with the form: @check_expect (({in}) -&gt; (out))     *
+ *                                                      *
+ * @author Henrique Rebelo                              *
+ ********************************************************/
+public class Rainfall {
+  /**
+	 * Examples:
+	 * @check_expect (({new double[] {1, 2, 3, 4, 5, 9999}})       -&gt; (3.0))
+	 * @check_expect (({new double[] {1, 2, -3, 4, 5, 9999}})      -&gt; (3.0))
+	 * @check_expect (({new double[] {1, 2, 3, 4, 5, 9999, 6, 7}}) -&gt; (3.0))
+	 * @check_expect (({new double[] {1, 2, 3, -4, 9999, 5}})      -&gt; (2.0))
+	 * @check_expect (({new double[] {10, 9999}})                  -&gt; (10.0))
+	 * @check_expect (({new double[] {10, 0, 9999}})               -&gt; (5.0))
+	 * @check_expect (({new double[] {-1, -2, -3, 9999}})          -&gt; (0.0))
+	 * @check_expect (({new double[] {9999}})                      -&gt; (0.0))
+	 */  
+   public static double averageRainfall(double[] rainfall) {
+      double sum = 0;
+      int i = 0;
+      int count = 0;
+      // YOUR CODE HERE!
+              for(i = 0; i &lt; rainfall.length; i++) {
+            if(rainfall[i] == 9999.0) {
+                break;
+            }
+            if(rainfall[i] &gt; 0) {
+                sum += rainfall[i];
+                count += 1;
+            }
+        }
+      if(count == 0) {
+         return 0.0;
+      }
+      return sum / count; 
+  }
+}
+</pre>
+</div>
+<p class="header score">Score</p>
+<div class="score">
+<p class="score">7/8</p>
+</div>
+<div class="footnotes"><div class="footnote">2024-09-06T02:36:43Z</div>
+</div>
+</body></html>

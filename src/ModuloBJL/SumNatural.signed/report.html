@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="Submission" content="AZ6KFMAE3VBJMY64IM09QKCR"/>
+<meta name="Time" content="2024-09-06T03:22:16Z"/>
+<meta name="ID" content="SumNatural"/>
+<meta name="User" content="damu-epyx-fyqa-uvah"/>
+<meta name="Problem" content="ext/2005210246bd9fg80c85xpsl7fba2cqhurk"/>
+<meta name="Elapsed" content="3528 ms"/>
+<style type="text/css">
+.header {font-weight: bold; font-size: 1.2em; }
+.item {font-weight: bold;}
+.pass {color: green;}
+.fail {color: red;}
+.note {color: blue; font-weight: bold;}
+table.file td {padding-right: 1em; background: #FFF; }
+.linenumber {color: gray;}
+.footnote {font-size: 0.7em;}
+table {font-size: 0.9em;}
+td, th { background: #EEE; margin: 0.5em; padding: 0.25em;}
+table.output td {vertical-align: top;}
+div.footnotes { border-top: 1px solid gray; padding-top: 0.5em; }
+</style>
+<title>Report</title>
+</head>
+<body>
+<p class="header call">Calling with Arguments</p>
+<div class="call">
+<table class="run">
+<tr><th>&#160;</th><th>Name</th><th>Arguments</th><th>Actual</th><th>Expected</th></tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>sum</pre></td>
+<td><pre>0</pre></td>
+<td><pre>0
+</pre></td>
+<td><pre>0
+</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>sum</pre></td>
+<td><pre>1</pre></td>
+<td><pre>1
+</pre></td>
+<td><pre>1
+</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>sum</pre></td>
+<td><pre>10</pre></td>
+<td><pre>55
+</pre></td>
+<td><pre>55
+</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>sum</pre></td>
+<td><pre>-10</pre></td>
+<td><pre>0
+</pre></td>
+<td><pre>0
+</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>sum</pre></td>
+<td><pre>100</pre></td>
+<td><pre>5050
+</pre></td>
+<td><pre>5050
+</pre></td>
+</tr>
+</table>
+</div>
+<p class="header studentFiles">Submitted files</p>
+<div class="studentFiles">
+<p class="caption">SumNatural.java:</p>
+<pre class="output">/*******************************************************
+ *                                                     * 
+ * PROBLEM:                                            *
+ *                                                     *
+ * Complete the design of the function called sum      *
+ * that consumes a natural number and produces the     *
+ * sum of [all] natural numbers starting from 1 to     *
+ * the consumed x.                                     *
+ * That is:  1 + 2 + 3 + ... + x                       *
+ *                                                     *
+ * @required the Java "while" loop                     *                               
+ *                                                     *
+ * see examples wrapped in check-expect.               *
+ *  -with the form: @check_expect (({in}) -&gt; (out))    *
+ *                                                     *
+ * @author Henrique Rebelo                             *
+ *******************************************************/
+public class SumNatural {
+	
+  /**
+   * Examples:
+   * @check_expect (({0})   -&gt; (0))
+   * @check_expect (({1})   -&gt; (1))
+   * @check_expect (({10})  -&gt; (55))
+   * @check_expect (({-10}) -&gt; (0))
+   * @check_expect (({100})  -&gt; (5050))
+   */  
+  public static int sum(int x) {
+    int sum = 0;
+    int count = 1; // first number to start sum
+        while(count &lt;= x) {
+            sum += count;
+            count++;
+        }
+    return sum;
+  }
+}
+</pre>
+</div>
+<p class="header score">Score</p>
+<div class="score">
+<p class="score">5/5</p>
+</div>
+<div class="footnotes"><div class="footnote">2024-09-06T03:22:16Z</div>
+</div>
+</body></html>

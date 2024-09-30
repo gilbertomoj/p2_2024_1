@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: 11.0.17 (Eclipse Adoptium)
+
+Name: Rainfall.java
+SHA-256-Digest: Wmr5+MVgnU9IwKtnDIwBSmm1PvRKl1vlW8ebG7hnL48=
+
+Name: report.html
+SHA-256-Digest: d+GxI18IHXPOWu1gy2gaj5oRqlV5ELKxgHAop6YxESk=
+

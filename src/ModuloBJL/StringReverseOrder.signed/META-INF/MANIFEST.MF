@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: 11.0.17 (Eclipse Adoptium)
+
+Name: report.html
+SHA-256-Digest: UlNlYHWAUi+yuH3cmQsegtbDedNKzTS8rDIbAYbb0go=
+
+Name: StringReverseOrder.java
+SHA-256-Digest: mZVs5opFEFJ3LpOLoUiY6o8UhCHPqkTasju2ezOAi10=
+

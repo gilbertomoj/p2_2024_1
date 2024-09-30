@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="Submission" content="CDCGHGBJBZ7O1YEJDZENG3DIY"/>
+<meta name="Time" content="2024-09-06T03:29:28Z"/>
+<meta name="ID" content="StudentGradesAscendingOrder"/>
+<meta name="User" content="damu-epyx-fyqa-uvah"/>
+<meta name="Problem" content="ext/20052104225ghjsrlr64k6vfim194fbwusm"/>
+<meta name="Elapsed" content="4093 ms"/>
+<style type="text/css">
+.header {font-weight: bold; font-size: 1.2em; }
+.item {font-weight: bold;}
+.pass {color: green;}
+.fail {color: red;}
+.note {color: blue; font-weight: bold;}
+table.file td {padding-right: 1em; background: #FFF; }
+.linenumber {color: gray;}
+.footnote {font-size: 0.7em;}
+table {font-size: 0.9em;}
+td, th { background: #EEE; margin: 0.5em; padding: 0.25em;}
+table.output td {vertical-align: top;}
+div.footnotes { border-top: 1px solid gray; padding-top: 0.5em; }
+</style>
+<title>Report</title>
+</head>
+<body>
+<p class="header call">Calling with Arguments</p>
+<div class="call">
+<table class="run">
+<tr><th>&#160;</th><th>Name</th><th>Arguments</th><th>Actual</th><th>Expected</th></tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>getGradesInAscendingOrder</pre></td>
+<td><pre>new double [] {10}</pre></td>
+<td><pre>[10.0]
+</pre></td>
+<td><pre>[10.0]
+</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>getGradesInAscendingOrder</pre></td>
+<td><pre>new double [] {10, 0}</pre></td>
+<td><pre>[0.0, 10.0]
+</pre></td>
+<td><pre>[0.0, 10.0]
+</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>getGradesInAscendingOrder</pre></td>
+<td><pre>new double [] {10, 9, 8, 2}</pre></td>
+<td><pre>[2.0, 8.0, 9.0, 10.0]
+</pre></td>
+<td><pre>[2.0, 8.0, 9.0, 10.0]
+</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>getGradesInAscendingOrder</pre></td>
+<td><pre>new double [] {5, 9, 1, 2, 3}</pre></td>
+<td><pre>[1.0, 2.0, 3.0, 5.0, 9.0]
+</pre></td>
+<td><pre>[1.0, 2.0, 3.0, 5.0, 9.0]
+</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>getGradesInAscendingOrder</pre></td>
+<td><pre>new double [] {10, 9, 10, 1, 2, 1}</pre></td>
+<td><pre>[1.0, 1.0, 2.0, 9.0, 10.0, 10.0]
+</pre></td>
+<td><pre>[1.0, 1.0, 2.0, 9.0, 10.0, 10.0]
+</pre></td>
+</tr>
+</table>
+</div>
+<p class="header studentFiles">Submitted files</p>
+<div class="studentFiles">
+<p class="caption">StudentGradesAscendingOrder.java:</p>
+<pre class="output">import java.util.*;
+
+/*******************************************************
+ *                                                     * 
+ * PROBLEM:                                            *
+ *                                                     *
+ * Complete the design of the function called          *
+ * getGradesInAscendingOrder that consumes an array of *
+ * grades and produces the grades in ascending order.  *
+ *                                                     *
+ * see examples wrapped in check-expect.               *
+ *  -with the form: @check_expect (({in}) -&gt; (out))    *
+ *                                                     *
+ * @author Henrique Rebelo                             *
+ *******************************************************/
+public class StudentGradesAscendingOrder {
+	/**
+	 * Examples:
+	 * @check_expect (({new double[] {10}})                 -&gt; (double[]{10}))
+	 * @check_expect (({new double[] {10, 0}})              -&gt; (double[]{0, 10}))
+	 * @check_expect (({new double[] {10, 9, 8, 2}})        -&gt; (double[]{2, 8, 9, 10}))
+	 * @check_expect (({new double[] {5, 9, 1, 2, 3}})      -&gt; (double[]{1, 2, 3, 5, 9}))
+	 * @check_expect (({new double[] {10, 9, 10, 1, 2, 1}}) -&gt; (double[]{1, 1, 2, 9, 10, 10}))
+	 */  
+	public static double [] getGradesInAscendingOrder(double [] grades) {
+        double[] sortedGrades = Arrays.copyOf(grades, grades.length);
+        Arrays.sort(sortedGrades);
+        return sortedGrades;
+	}
+}
+</pre>
+</div>
+<p class="header score">Score</p>
+<div class="score">
+<p class="score">5/5</p>
+</div>
+<div class="footnotes"><div class="footnote">2024-09-06T03:29:28Z</div>
+</div>
+</body></html>
